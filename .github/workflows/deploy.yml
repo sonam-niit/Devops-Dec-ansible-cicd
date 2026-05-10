@@ -30,8 +30,8 @@ jobs:
 
       - name: Replace Placeholders in my inventory
         run: |
-          sed -i "s/{{ host_placeholder }}/${{ secrets.HOST }}" ansible/inventory.yml
-          sed -i "s/{{ user_placeholder }}/${{ secrets.USER }}" ansible/inventory.yml
+          sed -i "s/{{ host_placeholder }}/${{ secrets.HOST }}/" ansible/inventory.yml
+          sed -i "s/{{ user_placeholder }}/${{ secrets.USER }}/" ansible/inventory.yml
 
       - name: Run Ansible Playbook
         run: |
